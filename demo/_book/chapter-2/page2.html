@@ -181,7 +181,58 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="&#x9875;&#x9762;2">&#x9875;&#x9762;2</h2>
+                                <h1 id="&#x63A5;&#x5165;&#x5FEB;&#x5E94;&#x7528;&#x5B98;&#x7F51;&#x7EDF;&#x8BA1;">&#x63A5;&#x5165;&#x5FEB;&#x5E94;&#x7528;&#x5B98;&#x7F51;&#x7EDF;&#x8BA1;</h1>
+<h2 id="&#x4E0B;&#x8F7D;sdk">&#x4E0B;&#x8F7D;SDK</h2>
+<p>&#x4E0B;&#x8F7D; SDK&#x6587;&#x4EF6;&#x5E76;&#x89E3;&#x538B;&#xFF0C;&#x5C06;&#x5176;&#x4E2D;&#x7684; appStatistics.min.js&#x3001;statistics.config.js&#x62F7;&#x8D1D;&#x5230;app.ux&#x540C;&#x7EA7;&#x7684;&#x76EE;&#x5F55;&#xFF08;src&#x76EE;&#x5F55;&#x4E0B;&#xFF09;&#xFF1B;</p>
+<hr>
+<h2 id="&#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x6587;&#x4EF6;">&#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</h2>
+<p>&#x7528;&#x7F16;&#x8F91;&#x5668;&#x6253;&#x5F00;statistics.config.js &#xFF0C;&#x4FEE;&#x6539;&#x5176;&#x4E2D;&#x7684; app_id &#x914D;&#x7F6E;:</p>
+<p><img src="http://static.zybuluo.com/koalasweet/dputnlpof773s9qjykq1oaxe/1.1.png" alt="1.1.png-6.2kB"></p>
+<hr>
+<h2 id="&#x63A5;&#x5165;sdk">&#x63A5;&#x5165;SDK</h2>
+<p>&#x4F7F;&#x7528;&#x7F16;&#x8F91;&#x5668;&#x6253;&#x5F00; app.ux &#x6587;&#x4EF6; , &#x5F15;&#x5165; SDK &#x6587;&#x4EF6;&#xFF1A;</p>
+<pre><code>    import APP_STATISTICS from &quot;appStatistics.js&quot;
+</code></pre><hr>
+<h2 id="&#x521D;&#x59CB;&#x5316;&#x6253;&#x70B9;">&#x521D;&#x59CB;&#x5316;&#x6253;&#x70B9;</h2>
+<p>&#x5728; app.ux &#x7684; onCreate &#x51FD;&#x6570;&#x4E2D;&#xFF0C;&#x589E;&#x52A0;&#x7EDF;&#x8BA1;&#x6253;&#x70B9;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code>    app.ux&#x6587;&#x4EF6;
+
+    onCreate:function(){
+
+        //&#x7EDF;&#x8BA1;&#x6253;&#x70B9;
+        APP_STATISTICS.app_sta_init( this );
+
+        // &#x5176;&#x4ED6;&#x4E1A;&#x52A1;&#x4EE3;&#x7801;...
+
+    },
+</code></pre><hr>
+<h2 id="&#x4F9D;&#x8D56;&#x68C0;&#x67E5;">&#x4F9D;&#x8D56;&#x68C0;&#x67E5;</h2>
+<ul>
+<li><p>&#x5185;&#x7F6E;&#x6A21;&#x5757;&#x4F9D;&#x8D56;</p>
+<p>  &#x7531;&#x4E8E;&#x5FEB;&#x5E94;&#x7528;&#x90E8;&#x5206;&#x5185;&#x7F6E;&#x6A21;&#x5757; ,&#x9700;&#x8981;&#x5728;manifest.json &#x7684; features &#x5C5E;&#x6027;&#x4E2D; &#x58F0;&#x660E;&#x624D;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#xFF0C;&#x8BF7;&#x68C0;&#x67E5;&#x4F9D;&#x8D56;&#x6A21;&#x5757;&#x662F;&#x5426;&#x5DF2;&#x7ECF;&#x58F0;&#x660E;&#x3002;SDK &#x4F7F;&#x7528;&#x5230;&#x7684;&#x5185;&#x7F6E;&#x6A21;&#x5757;&#x5305;&#x62EC;&#xFF1A; </p>
+<p>  storage (&#x7F13;&#x5B58;)
+  nativeFetch&#xFF08;&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#xFF09;
+  device&#xFF08;&#x8BBE;&#x5907;&#x4FE1;&#x606F;&#xFF09;
+  geolocation &#xFF08;&#x5730;&#x7406;&#x4F4D;&#x7F6E;&#xFF09;
+  network &#xFF08;&#x7F51;&#x7EDC;&#x4FE1;&#x606F;&#xFF09;
+  service.account (&#x8D26;&#x53F7;&#x63A5;&#x53E3;) </p>
+</li>
+<li><p>&#x4F9D;&#x8D56;&#x58F0;&#x660E;&#x65B9;&#x5F0F; </p>
+</li>
+</ul>
+<pre><code>    // manifest.json &#x6587;&#x4EF6;
+
+    &quot;features&quot;: [
+        { &quot;name&quot;: &quot;system.fetch&quot;},
+        {&quot;name&quot;: &quot;system.storage&quot;},
+        {&quot;name&quot;: &quot;system.device&quot;},
+        {&quot;name&quot;: &quot;system.geolocation&quot;},
+        {&quot;name&quot;: &quot;system.network&quot;},
+        {&quot;name&quot;: &quot;service.account&quot;},
+    ]
+</code></pre><hr>
+<h2 id="&#x63A5;&#x5165;&#x5B8C;&#x6210;">&#x63A5;&#x5165;&#x5B8C;&#x6210;</h2>
+<p>&#x786E;&#x8BA4;&#x5B8C;&#x6210;&#x4EE5;&#x4E0A;&#x6B65;&#x9AA4;&#x4E4B;&#x540E;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x6211;&#x4EEC;&#x63D0;&#x4F9B;&#x7684;&#x7EDF;&#x8BA1;&#x529F;&#x80FD;&#x5566;&#x3002;</p>
 
                                 
                                 </section>
@@ -221,7 +272,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"page2","level":"1.1.2","depth":2,"previous":{"title":"page1","level":"1.1.1","depth":2,"path":"chapter-1/page1.md","ref":"chapter-1/page1.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","ad","livereload"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"ad":{"contentBottom":"%3Cdiv%3EAds%20at%20the%20bottom%20of%20the%20page%3C/div%3E"},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh","gitbook":"*"},"file":{"path":"chapter-2/page2.md","mtime":"2018-06-19T06:16:35.552Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-19T08:09:27.474Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"page2","level":"1.1.2","depth":2,"previous":{"title":"page1","level":"1.1.1","depth":2,"path":"chapter-1/page1.md","ref":"chapter-1/page1.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","ad","livereload"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"ad":{"contentBottom":"%3Cdiv%3EAds%20at%20the%20bottom%20of%20the%20page%3C/div%3E"},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh","gitbook":"*"},"file":{"path":"chapter-2/page2.md","mtime":"2018-06-19T09:45:46.157Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-19T09:45:51.112Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
