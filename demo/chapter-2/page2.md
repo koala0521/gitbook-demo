@@ -10,15 +10,22 @@
 
 ## 修改配置文件
 用编辑器打开statistics.config.js ，修改其中的 app_id 配置:
-    
-![1.1.png-6.2kB][1]
+
+```javascript
+
+export default{
+    app_key: ''
+}
+
+```
 
 
 ----------
 ## 接入SDK
 
 使用编辑器打开 app.ux 文件 , 引入 SDK 文件：
-```
+
+```javascript
     import APP_STATISTICS from "appStatistics.js"
 
 ``` 
@@ -31,8 +38,8 @@
 
 在 app.ux 的 onCreate 函数中，增加统计打点代码：
 
-```
-    app.ux文件
+```javascript
+    // app.ux文件
 
     onCreate:function(){
         
@@ -64,7 +71,7 @@
  
 - 依赖声明方式 
 
-```
+```json
     // manifest.json 文件
     
     "features": [
@@ -85,6 +92,3 @@
 
 ## 接入完成
 确认完成以上步骤之后，就可以使用我们提供的统计功能啦。
-
-
-[1]: http://static.zybuluo.com/koalasweet/dputnlpof773s9qjykq1oaxe/1.1.png

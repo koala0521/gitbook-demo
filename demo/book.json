@@ -1,13 +1,28 @@
 {
     "root": "./",
-    "language":"zh",
+    "language": "zh-hans",
     "plugins":[
-        "-sharing",
-        "ad"
+        "sharing",
+        "tbfed-pagefooter@^0.0.1",
+        "search-plus",
+        "splitter",
+        "prism",
+        "prism-themes", 
+        "-highlight",
+        "-lunr", 
+        "-search"      
     ],
     "pluginsConfig": {
-        "ad": {
-          "contentBottom": "%3Cdiv%3EAds%20at%20the%20bottom%20of%20the%20page%3C/div%3E"
+        "tbfed-pagefooter": {
+            "copyright": "Copyright © Zhang Peng 2017",
+            "modify_label": "文件最近一次修订时间：",
+            "modify_format": "YYYY-MM-DD HH:mm:ss"
+        },
+        "prism": {
+            "css": [
+              "prism-themes/themes/prism-ghcolors.css"
+            ]
         }
+        
     }
 }
